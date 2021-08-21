@@ -10,10 +10,10 @@ public class User {
     @GeneratedValue
     private int id;
 
-    @Column(name = "firstName",nullable = false)
+    @Column(name = "first_name",nullable = false)
     private String firstName;
 
-    @Column(name = "lastName",nullable = false)
+    @Column(name = "last_name",nullable = false)
     private String lastName;
 
     @Column(name = "password",nullable = false)
@@ -22,7 +22,7 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "phoneNumber")
+    @Column(name = "phone_number")
     private String phoneNumber;
 
     @Column(name = "address")
@@ -69,6 +69,26 @@ public class User {
     }
 
     public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'' +
+                ", birthday=" + birthday +
+                ", sex=" + sex +
+                ", hometown='" + hometown + '\'' +
+                ", description='" + description + '\'' +
+                ", hobby='" + hobby + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", background='" + background + '\'' +
+                '}';
     }
 
     public int getId() {
@@ -183,3 +203,4 @@ public class User {
         this.background = background;
     }
 }
+
